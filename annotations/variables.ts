@@ -35,3 +35,14 @@ const logNumber: (i: number) => void = (i: number) => {
 // 1) Function that returns the 'any' type
 const json = '{"x": 10, "y": 20}';
 const coordinates: { x: number; y:number } = JSON.parse(json);
+
+// 2) When we declare a variable on one line 
+// and initialize on another
+let friends = ['olivia', 'apollo', 'beau'];
+let foundFriend: boolean;
+
+for (let i = 0; i < friends.length; i++) {
+  if (friends[i] === 'apollo') {
+    foundFriend = true;
+  }
+}
