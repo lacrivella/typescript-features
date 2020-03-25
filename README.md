@@ -23,4 +23,7 @@ examples of different types in typescript and why we use them
 ## Arrays
 **arrays*: where each element is some consistent type of value
 
+*when do we use typed arrays?* 
+Any time we need to represent a collection of records with some arbitrary sort order.
+
 
