@@ -12,3 +12,10 @@ examples of different types in typescript and why we use them
   - a type, just as 'string' or 'boolean' are
   - means TS has no idea what this is and can't check for correct property references
   - avoid variables with 'any' at all cost
+
+
+##Functions
+
+  **type annotations for functions**: code we add to tell Typescript what type of arguments a function will recieve and what type of values it will return.
+
+  **type inference for functions**: Typescript tries to figure out what type of value a function will return.
