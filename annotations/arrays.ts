@@ -21,3 +21,9 @@ animalCrossingGames.push(1000);
 animalCrossingGames.map((animalCrossing: string): string => {
   return animalCrossing.toUpperCase();
 });
+
+// Flexible types
+const importantDates: (Date | string)[] = [];
+importantDates.push('2020-03-20');
+importantDates.push(new Date());
+importantDates.push(100); // this will error
