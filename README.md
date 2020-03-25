@@ -1,7 +1,7 @@
 # typescript-features
 examples of different types in typescript and why we use them
 
-##What is a Type
+## What is a Type
 **Type** is an easy way to refer to the different properties and functions that a value has.
 
 **Type annotations**: code we add to tell Typescript what type of value a variable will refer to. Basically we, the developers, tell Typescript the type
@@ -14,8 +14,13 @@ examples of different types in typescript and why we use them
   - avoid variables with 'any' at all cost
 
 
-##Functions
+## Functions
 
   **type annotations for functions**: code we add to tell Typescript what type of arguments a function will recieve and what type of values it will return.
 
   **type inference for functions**: Typescript tries to figure out what type of value a function will return.
+
+## Arrays
+**arrays*: where each element is some consistent type of value
+
+
