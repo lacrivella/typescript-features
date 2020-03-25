@@ -38,3 +38,21 @@ const commonThrowError= (message: string): string => {
   return message;
 };
 //annotate to what you would return if no error
+
+const forecast = {
+  date: new Date(),
+  weather: 'sunny'
+}
+
+//ES2015
+//const logWeather = ({ date, weather }) => {
+  //console.log(date);
+  //console.log(weather);
+//};
+
+const logWeather = ({ date, weather }: {date: Date, weather: string}): void => {
+  console.log(date);
+  console.log(weather);
+};
+
+logWeather(forecast);
