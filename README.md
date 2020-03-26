@@ -29,4 +29,6 @@ Any time we need to represent a collection of records with some arbitrary sort o
 ## Tuple
 **tuple**: array like structure where each element represents some property of a record.
 
+Tuples are rare. It's better to use an object. That way, a programmer can see what the key:value pairs are. WIth a tuple you just get the value, so it becomes difficult to decipher what that value represents.
+
 
