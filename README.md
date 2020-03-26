@@ -21,9 +21,12 @@ examples of different types in typescript and why we use them
   **type inference for functions**: Typescript tries to figure out what type of value a function will return.
 
 ## Arrays
-**arrays*: where each element is some consistent type of value
+**arrays**: where each element is some consistent type of value
 
 *when do we use typed arrays?* 
 Any time we need to represent a collection of records with some arbitrary sort order.
+
+## Tuple
+**tuple**: array like structure where each element represents some property of a record.
 
 
