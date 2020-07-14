@@ -5,6 +5,7 @@ class Boat {
     return `This boat is painted ${this.color}`;
   }
 
+  @testDecorator
   pilot(): void {
     console.log('swish swash');
   }
