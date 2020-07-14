@@ -9,3 +9,8 @@ class Boat {
     console.log('swish swash');
   }
 }
+
+function testDecorator(target: any, key: string): void {
+  console.log('Ta-ta-ta-targeeeeet: ', target);
+  console.log('Key: ', key);
+}
