@@ -15,6 +15,8 @@ class Boat {
 
 function testDecorator(target: any, key: string) {
   console.log(target.color);
+  //will never be able to read the value of a property. 
+  //can only show if there is a property called color not the value
 }
 
 function logError(errorMessage: string) {
