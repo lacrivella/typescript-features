@@ -8,10 +8,17 @@ class Boat {
   }
 
   @logError('Uh-oh! Boat hit an iceberg.')
-  pilot(): void {
-    throw new Error();
-    console.log('swish swash');
+  pilot(@parameterDecorator speed: string): void {
+    if (speed === 'fast') {
+      console.log('swish swash');
+    } else {
+      console.log('not going enough knots');
+    }
   }
+}
+
+function parameterDecorator(target: any, key: string, index: number) {
+  console.log(key, index);
 }
 
 function testDecorator(target: any, key: string) {
