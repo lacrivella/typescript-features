@@ -34,3 +34,11 @@ Any time we need to represent a collection of records with some arbitrary sort o
 **tuple**: array like structure where each element represents some property of a record.
 
 Tuples are rare. It's better to use an object. That way, a programmer can see what the key:value pairs are. WIth a tuple you just get the value, so it becomes difficult to decipher what that value represents.
+
+## Decorators
+
+**decorators on a property, method, accesso**
+- first argument is the prototype of the object
+- second argument is the key of the property/method/accessor on the object
+- third argument is the property descriptor
+- decorators are applied when the code for this class is ran (*not when an instance is created*)
