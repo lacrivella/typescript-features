@@ -13,6 +13,15 @@ class Boat {
 }
 
 function logError(target: any, key: string, desc: PropertyDescriptor): void {
-  console.log('Ta-ta-ta-targeeeeet: ', target);
-  console.log('Key: ', key);
+  const method = desc.value;
+
+  desc.value = function () {
+    try {
+      method();
+    } catch (err) {
+      console.log('Oops! Boat hit an iceberg.');
+    }
+  };
 }
+
+new Boat().pilot();
