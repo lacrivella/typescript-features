@@ -37,7 +37,7 @@ Tuples are rare. It's better to use an object. That way, a programmer can see wh
 
 ## Decorators
 
-**decorators on a property, method, accesso**
+**decorators on a property, method, accessor**
 - first argument is the prototype of the object
 - second argument is the key of the property/method/accessor on the object
 - third argument is the property descriptor
