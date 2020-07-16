@@ -1,5 +1,6 @@
 import 'reflect-metadata';
 
+@printMetadata
 class Flower {
   color: string = 'violet';
 
@@ -9,14 +10,19 @@ class Flower {
   }
 }
 
+// factory decorator
 function markFunction(dayInfo: string) {
   return function (target: Flower, key: string) {
     Reflect.defineMetadata('time', dayInfo, target, key);
   };
 }
 
-const time = Reflect.getMetadata('time', Flower.prototype, 'sunlight');
-console.log(time);
+function printMetadata(target: typeof Flower) {
+  for (let key in target.prototype) {
+    const time = Reflect.getMetadata('time', target.prototype, key);
+    console.log(time);
+  }
+}
 
 //reflect-metadata adds Reflect to the global scope so no need to write it out
 
