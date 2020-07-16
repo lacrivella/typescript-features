@@ -3,14 +3,16 @@ import 'reflect-metadata';
 class Flower {
   color: string = 'violet';
 
-  @markFunction
+  @markFunction('9AM')
   sunlight(): void {
     console.log('grow!');
   }
 }
 
-function markFunction(target: Flower, key: string) {
-  Reflect.defineMetadata('time', 9, target, key);
+function markFunction(dayInfo: string) {
+  return function (target: Flower, key: string) {
+    Reflect.defineMetadata('time', dayInfo, target, key);
+  };
 }
 
 const time = Reflect.getMetadata('time', Flower.prototype, 'sunlight');
