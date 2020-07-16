@@ -9,3 +9,7 @@ Reflect.defineMetadata('note', 'good morning', flower);
 
 //should not see any mention of the note printed out
 console.log(flower);
+
+//how to retrieve metadata
+const note = Reflect.getMetadata('note', flower);
+console.log(note);
