@@ -1,9 +1,26 @@
 import 'reflect-metadata';
+
+class Flower {
+  color: string = 'violet';
+
+  @markFunction
+  sunlight(): void {
+    console.log('grow!');
+  }
+}
+
+function markFunction(target: Flower, key: string) {
+  Reflect.defineMetadata('time', 9, target, key);
+}
+
+const time = Reflect.getMetadata('time', Flower.prototype, 'sunlight');
+console.log(time);
+
 //reflect-metadata adds Reflect to the global scope so no need to write it out
 
-const flower = {
-  color: 'violet',
-};
+// const flower = {
+//   color: 'violet',
+// };
 
 // Reflect.defineMetadata('note', 'good morning', flower);
 // Reflect.defineMetadata('petals', 5, flower);
@@ -19,7 +36,7 @@ const flower = {
 // console.log(petals);
 
 //adds metadata to a property
-Reflect.defineMetadata('note', 'also the name', flower, 'color');
+// Reflect.defineMetadata('note', 'also the name', flower, 'color');
 
-const propNote = Reflect.getMetadata('note', flower, 'color');
-console.log(propNote);
+// const propNote = Reflect.getMetadata('note', flower, 'color');
+// console.log(propNote);
